@@ -54,9 +54,14 @@ openid.RelyingParty = function(returnUrl, realm, stateless, strict, extensions)
   this.extensions = extensions;
 }
 
-openid.RelyingParty.prototype.authenticate = function(identifier, immediate, callback)
+openid.RelyingParty.prototype.authenticate = function(identifier, immediate, callback, queryString)
 {
-  openid.authenticate(identifier, this.returnUrl, this.realm, 
+  var callbackUrl = this.returnUrl;
+  if (queryString) {
+    callbackUrl += queryString;
+  }
+
+  openid.authenticate(identifier, callbackUrl, this.realm,
       immediate, this.stateless, callback, this.extensions, this.strict);
 }
 
