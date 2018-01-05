@@ -1,5 +1,5 @@
 {
-  "name": "openid",
+  "name": "ignum-openid",
   "description": "OpenID 1.1/2.0 library for node.js",
   "keywords": [
     "openid",
@@ -21,7 +21,7 @@
   "version": "2.0.6",
   "repository": {
     "type": "git",
-    "url": "http://github.com/havard/node-openid.git"
+    "url": "http://github.com/elendirx/node-openid.git"
   },
   "bugs": "http://github.com/havard/node-openid/issues",
   "licenses": [
